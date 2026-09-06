@@ -59,6 +59,7 @@ export default function SectionNavigation() {
       const section = document.getElementById(id)
       if (!section) return
       event.preventDefault()
+      section.scrollTop = 0
       const header = document.querySelector('.cw header')?.getBoundingClientRect().height ?? 96
       window.scrollTo({ top: Math.max(0, section.getBoundingClientRect().top + window.scrollY - header),
         behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })

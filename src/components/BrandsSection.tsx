@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import './BrandsSection.css'
 import hitachi from '../assets/Hitachi-Logo-1968.png'
 import cat from '../assets/Logo CAT.webp'
@@ -25,7 +26,7 @@ export default function BrandsSection() {
       <h2>Marcas que mueven<br/><em>grandes proyectos.</em></h2>
       <p>Trabajamos con equipos Kobelco, CAT, Hitachi, New Holland y Mercedes-Benz para responder a las necesidades de cada obra.</p>
       <p>Seleccionamos el equipo según el terreno, la actividad y el alcance de tu proyecto, con el acompañamiento de CAS&CO en cada etapa.</p>
-      <a className="yellowBtn" href="#contacto">Encuentra tu equipo <span aria-hidden="true">↗</span></a>
+      <a className="yellowBtn" href="#contacto">Encuentra tu equipo <ArrowRight aria-hidden="true" /></a>
     </motion.div>
   </section>
 }

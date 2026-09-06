@@ -26,11 +26,12 @@ export function useSectionWheel() {
         ? stops.find(top => top > y + 10)
         : [...stops].reverse().find(top => top < y - 10)
       if (destination === undefined) return
+      const arrivingSection = points.find(section => Math.abs(
+        Math.max(0, Math.min(maxY, section.getBoundingClientRect().top + y - header)) - destination!
+      ) < 2)
+      if (arrivingSection) arrivingSection.scrollTop = 0
       // En pantallas bajas, permitir leer el contenido largo antes de cambiar.
-      const readingStep = Math.max(200, window.innerHeight - header - 24)
-      if (Math.abs(destination - y) > readingStep + header) {
-        destination = y + Math.sign(delta) * readingStep
-      }
+      // Siempre aterrizar en el comienzo de la sección, nunca entre dos bloques.
       preventDefault()
       savedScrollBehavior = document.documentElement.style.scrollBehavior
       document.documentElement.style.scrollBehavior = 'auto'
@@ -59,7 +60,15 @@ export function useSectionWheel() {
       const target = event.target as HTMLElement
       if (target.closest('textarea, select, [contenteditable="true"], .cwMobile')) return
       if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) return
+      if (canScrollInside(target, event.deltaY)) return
       advance(event.deltaY, () => event.preventDefault())
+    }
+    function canScrollInside(target: HTMLElement, delta: number) {
+      const section = target.closest<HTMLElement>('.cw main > section')
+      if (!section || !['auto', 'scroll'].includes(getComputedStyle(section).overflowY)) return false
+      return delta > 0
+        ? section.scrollTop + section.clientHeight < section.scrollHeight - 2
+        : section.scrollTop > 2
     }
     let touchStart: { x: number; y: number } | undefined
     let swiped = false
@@ -79,6 +88,10 @@ export function useSectionWheel() {
       const deltaY = touchStart.y - event.touches[0].clientY
       if (Math.abs(deltaX) > Math.abs(deltaY)) { touchStart = undefined; return }
       if (Math.abs(deltaY) < 10) return
+      if (canScrollInside(event.target as HTMLElement, deltaY)) {
+        touchStart = undefined
+        return
+      }
       advance(deltaY, () => { event.preventDefault(); swiped = true })
     }
     function endTouch() { touchStart = undefined; swiped = false }
