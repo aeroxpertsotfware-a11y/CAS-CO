@@ -13,6 +13,7 @@
 :root{--header-height:76px}
 html{scroll-padding-top:var(--header-height)}
 html.sectionPaging{scroll-snap-type:none}
+html.sectionPaging .cw main>.industryStrip{display:none}
 @media(min-width:900px) and (prefers-reduced-motion:no-preference){html{scroll-snap-type:y proximity}.cw main>section,.cw footer{scroll-snap-align:start}}
 .cw header{height:var(--header-height)}
 .cw header .cwLogo{width:166px;height:62px}
