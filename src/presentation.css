@@ -1,4 +1,6 @@
 /* Cada punto abre una sección completa debajo del encabezado. */
+.heroActions>a:nth-child(2){gap:12px}
+.heroActions>a:nth-child(2) svg{width:17px;height:17px;stroke-width:1.6;flex-shrink:0}
 .cw .cwFeature .featurePhoto{background:transparent}
 .cw .cwFeature .featurePhoto:after{display:none}
 .cw .cwLogo{position:relative;width:192px;height:74px;overflow:hidden;background:transparent;border:0;border-radius:0;box-shadow:none}
@@ -10,6 +12,7 @@
 .cw .projectsGrid>div:first-child .projectPhoto{border-radius:22px}
 :root{--header-height:76px}
 html{scroll-padding-top:var(--header-height)}
+html.sectionPaging{scroll-snap-type:none}
 @media(min-width:900px) and (prefers-reduced-motion:no-preference){html{scroll-snap-type:y proximity}.cw main>section,.cw footer{scroll-snap-align:start}}
 .cw header{height:var(--header-height)}
 .cw header .cwLogo{width:166px;height:62px}

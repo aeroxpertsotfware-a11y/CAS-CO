@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './SectionNavigation.css'
+import { useSectionWheel } from './useWheelPaging'
 
 const sections = [
   ['inicio', 'Inicio'],
@@ -14,6 +15,7 @@ const sections = [
 ]
 
 export default function SectionNavigation() {
+  useSectionWheel()
   const [active, setActive] = useState('inicio')
 
   useEffect(() => {

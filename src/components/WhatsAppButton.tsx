@@ -1,7 +1,7 @@
 export default function WhatsAppButton() {
   return <a
     className="whatsappButton"
-    href="https://wa.me/573127766213"
+    href={`https://wa.me/573127766213?text=${encodeURIComponent('Hola, me interesa cotizar maquinaria o servicios de CAS&CO. ¿Podrían asesorarme para mi proyecto?')}`}
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Contactar por WhatsApp"

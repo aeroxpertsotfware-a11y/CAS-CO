@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 export function useSectionWheel() {
   useEffect(() => {
+    document.documentElement.classList.add('sectionPaging')
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
     let frame = 0
     let releaseTimer = 0
@@ -62,6 +63,7 @@ export function useSectionWheel() {
     window.addEventListener('keydown', finish)
     return () => {
       finish()
+      document.documentElement.classList.remove('sectionPaging')
       window.removeEventListener('wheel', wheel)
       window.removeEventListener('pointerdown', finish)
       window.removeEventListener('keydown', finish)
