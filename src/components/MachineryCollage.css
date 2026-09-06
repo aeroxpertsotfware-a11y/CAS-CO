@@ -1,0 +1,17 @@
+.cwFeature .featurePhoto{padding:50px 25px;background:#11150e;display:flex;align-items:center;justify-content:center;min-height:560px;overflow:hidden}
+.cwFeature .featurePhoto:after{display:none}
+.machineryCollage{position:relative;isolation:isolate;width:100%;max-width:800px;aspect-ratio:1.22}
+.collagePhoto{position:absolute;margin:0;border-radius:24px;overflow:hidden;background:#242a1e;box-shadow:0 14px 38px #0003;border:1px solid #ffffff0d}
+.cwFeature .collagePhoto img{display:block;width:100%;height:100%;max-height:none;object-fit:cover;padding:0;filter:none;transition:transform .45s ease}
+.collagePhoto:hover img{transform:scale(1.035)}
+.collagePhoto--main{left:10%;top:21%;width:75%;height:57%;z-index:1}
+.collagePhoto--top{left:20%;top:3%;width:43%;height:23%;z-index:3}
+.collagePhoto--right{right:0;top:37%;width:27%;height:51%;z-index:4}
+.collagePhoto--bottom{left:0;bottom:2%;width:45%;height:28%;z-index:5}
+.collagePhoto--main img{object-position:50% 60%}
+.collagePhoto--top img{object-position:50% 48%}
+.collagePhoto--right img{object-position:50% 55%}
+.collagePhoto--bottom img{object-position:50% 58%}
+@media(min-width:1100px){.cwFeature .featurePhoto{padding:60px 35px}}
+@media(max-width:720px){.cwFeature .featurePhoto{min-height:0;padding:35px 18px 15px}.collagePhoto{border-radius:18px}.machineryCollage{max-width:580px}.cwFeature .featureCopy{padding-top:35px}}
+@media(prefers-reduced-motion:reduce){.cwFeature .collagePhoto img{transition:none}.collagePhoto:hover img{transform:none}}

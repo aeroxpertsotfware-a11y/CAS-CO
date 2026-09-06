@@ -1,0 +1,7 @@
+.cwHero{isolation:isolate;overflow:hidden;background:#111310}
+.cwHero .heroBottom{border-top:0}
+.cwHero .heroVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;pointer-events:none}
+.cwHero .heroVideoShade{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#080b07d9 0%,#080b0799 48%,#080b0738 100%),linear-gradient(0deg,#080b0780,transparent 35%)}
+.heroVideoToggle{position:absolute;right:5%;bottom:95px;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:11px 17px;border:1px solid #ffffff45;border-radius:999px;background:#11131055;backdrop-filter:blur(12px);color:#f1f4ed;font:400 12px Inter,Arial,sans-serif;transition:background .2s;z-index:2}
+.heroVideoToggle:hover{background:#111310aa}.heroVideoToggle svg{width:15px;height:15px;stroke-width:1.7}
+@media(max-width:720px){.heroVideoToggle{position:relative;right:auto;bottom:auto;order:1;align-self:flex-start;margin-top:24px;padding:10px 15px;font-size:11px}.heroBottom{order:2;margin-top:24px}.cwHero .heroVideoShade{background:linear-gradient(90deg,#080b07d9,#080b0773),linear-gradient(0deg,#080b0766,transparent 50%)}}

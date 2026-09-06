@@ -1,0 +1,12 @@
+/* Co Headline para titulares; Open Sans para texto y controles. */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+:root{font-family:'Open Sans',sans-serif;font-synthesis:none}
+.cw,.cw h1,.cw h2,.cw h3,.cw h4,.cw p,.cw a,.cw button,.cw input,.cw select,.cw textarea,.cw label,.cwStats strong{font-family:'Open Sans',sans-serif}
+.cw h1,.cw h2,.cw h3,.cw h4,.cwStats strong{font-family:'co-headline','Open Sans',sans-serif;font-weight:600;letter-spacing:normal}
+.cwHero h1{font-size:clamp(40px,4.3vw,60px);font-weight:500;line-height:1.12;letter-spacing:-.025em;max-width:720px;margin:28px 0 32px}
+.cwIntro h2,.cwServices h2,.cwProjects h2,.cwTeam h2,.cwContact h2,.featureCopy h2{font-size:clamp(32px,3.35vw,48px);font-weight:600;line-height:1.25;letter-spacing:-.01em}
+.serviceRows h3,.projectsGrid h3{font-weight:600;letter-spacing:normal}
+.yellowBtn,.cw header>.yellowBtn,.heroVideoToggle{font-family:'Open Sans',sans-serif;font-weight:500;letter-spacing:normal}
+.cw header nav,.heroActions>a:nth-child(2),.cwContact label,.overline,.industryStrip{font-weight:500;letter-spacing:normal}
+.heroDescription{font-size:18px;line-height:1.6;max-width:640px;font-weight:400}.cwStats strong{font-weight:600;letter-spacing:-.015em}
+@media(max-width:720px){.cwHero h1{font-size:clamp(34px,8.2vw,48px);line-height:1.15;letter-spacing:-.025em}.cwIntro h2,.cwServices h2,.cwProjects h2,.cwTeam h2,.cwContact h2,.featureCopy h2{font-size:clamp(29px,7.5vw,38px);line-height:1.25}.heroDescription{font-size:16px;line-height:1.65}}

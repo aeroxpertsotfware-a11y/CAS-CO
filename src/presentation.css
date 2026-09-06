@@ -1,0 +1,55 @@
+/* Cada punto abre una sección completa debajo del encabezado. */
+.cw .cwFeature .featurePhoto{background:transparent}
+.cw .cwFeature .featurePhoto:after{display:none}
+.cw .cwLogo{position:relative;width:192px;height:74px;overflow:hidden;background:transparent;border:0;border-radius:0;box-shadow:none}
+.cw .cwLogo img,.cw footer .cwLogo img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:295px;height:295px;max-width:none;max-height:none;object-fit:contain}
+@media(max-width:720px){.cw header .cwLogo{width:152px;height:60px;border-radius:13px}.cw header .cwLogo img{width:235px;height:235px}}
+.cw .projectsGrid .projectPhoto{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:24px;border-radius:22px;text-align:center}
+.cw .projectsGrid .projectPhoto svg{position:static;inset:auto;flex-shrink:0;width:55px;height:55px;margin:0}
+.cw .projectsGrid .projectPhoto span{display:block;margin:0;line-height:1.5}
+.cw .projectsGrid>div:first-child .projectPhoto{border-radius:22px}
+:root{--header-height:76px}
+html{scroll-padding-top:var(--header-height)}
+@media(min-width:900px) and (prefers-reduced-motion:no-preference){html{scroll-snap-type:y proximity}.cw main>section,.cw footer{scroll-snap-align:start}}
+.cw header{height:var(--header-height)}
+.cw header .cwLogo{width:166px;height:62px}
+.cw header .cwLogo img{width:252px;height:252px}
+.cw header>.yellowBtn{min-height:40px;padding:10px 18px;font-size:12px}
+.cw header .colombiaBadge{width:40px;height:40px;margin-left:14px}
+.cw header .colombiaFlag{width:29px;height:29px}
+.cw main>section{scroll-margin-top:0}
+@media(min-width:900px){
+ .cw main>section:not(.cwHero){min-height:calc(100svh - var(--header-height));box-sizing:border-box;padding-top:36px;padding-bottom:36px}
+ .cw main>.industryStrip{display:none}
+ .cwIntro{align-items:center}
+ .cwServices,.cwProjects,.cwTeam{display:flex;flex-direction:column;justify-content:center}
+ .cwServices .sectionHead{flex-shrink:0}
+ .cw .overline{margin-bottom:14px}
+ .cw .serviceRows{margin-top:30px}
+ .cw .serviceRows article{padding:18px 0;gap:20px}
+ .cw .serviceRows h3{font-size:23px}
+ .cw .serviceRows p{font-size:13px;line-height:1.6}
+ .cw main>section.cwFeature{padding-top:0;padding-bottom:0;align-items:center}
+ .cw .cwFeature .featurePhoto{min-height:0;padding:25px;max-height:calc(100svh - 116px)}
+ .cw .machineryCollage{max-width:min(100%,calc((100svh - 150px)*1.22))}
+ .cw .featureCopy{padding:28px 10%}
+ .cw .featureCopy h2{margin:16px 0}
+ .cw .featureCopy ul{padding:8px 0}
+ .cw .projectsGrid{margin-top:28px}
+ .cw .projectPhoto,.cw .projectsGrid>div:first-child .projectPhoto{min-height:0;height:clamp(140px,24vh,240px)}
+ .cw .projectsGrid article>div:last-child{padding:15px 5px}
+ .cw .cwStats{align-items:center}
+ .cw .cwBrands{gap:6%;padding:36px 7%}
+ .cw .brandsGrid{min-height:280px;padding:25px;gap:30px 20px}
+ .cw .brandsCopy>p:not(.overline){font-size:14px;line-height:1.7;margin-bottom:16px}
+ .cw .cwBrands h2{margin-bottom:22px}
+ .cw .teamPhoto{margin-top:25px}
+ .cw .cwTeam .teamPhoto img{height:clamp(200px,40vh,350px)}
+ .cw .cwContact{align-items:center;gap:6%}
+ .cw .cwContact form{padding:24px;gap:14px}
+ .cw .cwContact input,.cw .cwContact select{min-height:42px;padding:10px 15px}
+ .cw .cwContact textarea{min-height:85px;height:85px}
+ .cw .cwContact h2,.cw .cwServices h2,.cw .cwProjects h2,.cw .cwTeam h2,.cw .cwBrands h2{font-size:clamp(30px,3vw,44px)}
+}
+@media(min-width:900px) and (max-height:800px){.cw .featureCopy{padding:18px 8%}.cw .featureCopy h2{font-size:36px;line-height:1.16}.cw .featureCopy>p{font-size:13px;line-height:1.6}.cw .featureCopy li{padding:6px 0}.cw .cwFeature .featurePhoto{max-height:calc(100svh - 96px);padding:20px}.cw .machineryCollage{max-width:min(100%,calc((100svh - 145px)*1.22))}}
+@media(max-width:720px){:root{--header-height:66px}.cw header .cwLogo{width:138px;height:54px}.cw header .cwLogo img{width:218px;height:218px}.cwMobile{top:var(--header-height)}.cw header .colombiaBadge{width:36px;height:36px;margin-left:auto}.cw header .colombiaFlag{width:26px;height:26px}.cw header .menuToggle{width:38px;height:38px;padding:7px}}
