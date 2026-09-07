@@ -7,6 +7,7 @@ const sections = [
   ['nosotros', 'Nosotros'],
   ['servicios', 'Servicios'],
   ['maquinaria', 'Maquinaria'],
+  ['flota', 'Nuestra flota'],
   ['proyectos', 'Proyectos'],
   ['resultados', 'Resultados'],
   ['marcas', 'Marcas'],

@@ -58,7 +58,7 @@ export function useSectionWheel() {
     function wheel(event: WheelEvent) {
       if (!event.deltaY || event.ctrlKey || event.metaKey || event.shiftKey) return
       const target = event.target as HTMLElement
-      if (target.closest('textarea, select, [contenteditable="true"], .cwMobile')) return
+      if (target.closest('textarea, select, [contenteditable="true"], .cwMobile, dialog[open]')) return
       if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) return
       if (canScrollInside(target, event.deltaY)) return
       advance(event.deltaY, () => event.preventDefault())
@@ -77,7 +77,7 @@ export function useSectionWheel() {
       swiped = false
       if (event.touches.length !== 1) return
       const target = event.target as HTMLElement
-      if (target.closest('input, textarea, select, button, [contenteditable="true"], .cwMobile')) return
+      if (target.closest('input, textarea, select, button, [contenteditable="true"], .cwMobile, dialog[open]')) return
       touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY }
     }
     function moveTouch(event: TouchEvent) {
