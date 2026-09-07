@@ -11,6 +11,7 @@ const sections = [
   ['proyectos', 'Proyectos'],
   ['resultados', 'Resultados'],
   ['marcas', 'Marcas'],
+  ['clientes', 'Experiencia'],
   ['equipo', 'Nuestro equipo'],
   ['contacto', 'Contacto'],
 ]
