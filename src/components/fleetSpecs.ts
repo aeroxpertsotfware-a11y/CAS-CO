@@ -22,11 +22,11 @@ export const fleetSpecs: FleetSpec[] = [
   },
   {
     reference: 'Kobelco SK350LC-10 · Latinoamérica',
-    rows: [['Peso operativo', '36.000 kg'], ['Motor', 'HINO J08ETM-KSDL'], ['Profundidad máxima', '7,56 m'], ['Alcance máximo', '11,26 m']],
+    rows: [['Peso operativo', '36.000 kg'], ['Motor', 'HINO J08ETM'], ['Profundidad máxima', '7,56 m'], ['Alcance máximo', '11,26 m']],
     source: { label: 'Ficha oficial Kobelco', url: 'https://www.kobelcocm-global.com/products/excavators/latinamerica/SK350LC-10.html' },
   },
   {
-    reference: 'Komatsu PC200-8M0 · Australia / Nueva Zelanda',
+    reference: 'Komatsu PC200-8M0 ',
     rows: [['Potencia neta', '103 kW / 138 HP'], ['Peso operativo', '21.000–21.200 kg'], ['Motor', 'Komatsu SAA6D107E-1'], ['Cilindrada', '6,69 L']],
     source: { label: 'Ficha oficial Komatsu (PDF)', url: 'https://www.komatsu.com/content/dam/komatsu/websites/oceania/documents/brochures/excavators/pc200_220lc-8m0.pdf' },
   },
